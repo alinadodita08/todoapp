@@ -3,4 +3,7 @@ from django.http import HttpResponse
 
 
 def hello(request):
-    return HttpResponse("Hello Alina")
+    return HttpResponse("Hello Sergey")
+
+def intro(request):
+    return HttpResponse("This is my first time using Django")
