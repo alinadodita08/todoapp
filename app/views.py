@@ -7,3 +7,6 @@ def hello(request):
 
 def intro(request):
     return HttpResponse("This is my first time using Django")
+
+def todo(request):
+    return render(request, 'todo.html')
