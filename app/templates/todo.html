@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Hello</h1>
-    <h2>Hello</h2>
-    <h3>Hello</h3>
-    <h6>Hello</h6>
-    <p>Hello Hello Hello Hello Hello Hellov</p>
-    <p>Hello Hello Hello Hello Hello Hellov</p>
-    <a href="www.google.com">I AM GOOGLE</a>
-    <img width="300px" src="data:image/png;base64,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" alt="">
-    <button onclick="alert('DONT CLICK ME')">Click me</button>
-    
+    <h1>To-Do List</h1>
+
+    <form method="POST" hx-post="/todo_add/" hx-trigger="submit" hx-target="#todos" hx-swap="beforeend">
+        {% csrf_token %}
+        <input type="text" name="todo" placeholder="Enter your todo">
+        <button>Add</button>
+    </form>
+    <ul id="todos">
+        <li>
+            <div>
+                <input type="checkbox" name="todo" onchange="(el =>
+                    {el.checked ? 
+                        el.parentElement.style.textDecoration = 'line-through'
+                    : el.parentElement.style.textDecoration = 'none';})(this)">
+                    <label for="todo">Todo 1</label>
+            </div>
+        </li>
+    </ul>
+    </form>
 </body>
+
 </html>

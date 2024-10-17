@@ -23,5 +23,6 @@ urlpatterns = [
     path('hello/', views.hello),
     path('', views.hello),
     path('intro/', views.intro),
-    path('todo/', views.todo)
+    path('todo/', views.todo),
+    path('todo_add/', views.todo_add)
 ]

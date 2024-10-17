@@ -1,0 +1,9 @@
+<li>
+    <div>
+        <input type="checkbox" name="todo" onchange="(el =>
+            {el.checked ? 
+                el.parentElement.style.textDecoration = 'line-through'
+            : el.parentElement.style.textDecoration = 'none';})(this)">
+            <label for="todo">{{ task }}</label>
+    </div>
+</li>
